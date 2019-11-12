@@ -13,18 +13,19 @@ function random(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 function generatePassword() {
-    var password = ""
-    var includedInPassord = []
+    var password = "";
+    var includedInPassord = [];
     var upper = document.getElementById("upperLetters").checked;
     var lower = document.getElementById("lowerLetters").checked;
     var numbers = document.getElementById("numbers").checked;
     var symbols = document.getElementById("symbols").checked;
 
-    if (upper == true) { includedInPassord.push(upperLetter); }
-    if (lower == true) { includedInPassord.push(lowerLetter); }
-    if (symbols == true) { includedInPassord.push(unicode); }
-    if (numbers == true) { includedInPassord.push(intergers); }
-
+    if (upper) { includedInPassord.push(upperLetter); }
+    if (lower) { includedInPassord.push(lowerLetter); }
+    if (symbols) { includedInPassord.push(unicode); }
+    if (numbers) { includedInPassord.push(intergers); }
+    if(!upper && !lower && !symbols && !numbers){alert("password must have something in it")}
+ 
     for (let i = 0; i < slider.value; i++) {
         password += random(random(includedInPassord))
     }
@@ -32,9 +33,7 @@ function generatePassword() {
 }
 function copy_password() {
     var copyText = document.getElementById("result");
-    var textArea = document.createElement("textarea");
-    textArea.value = copyText.textContent;
-    document.body.appendChild(textArea);
-    textArea.select();
-    document.execCommand("Copy");
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
 }

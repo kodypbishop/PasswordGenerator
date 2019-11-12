@@ -20,12 +20,14 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://kit.fontawesome.com/6bc802c1b6.js" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <title>Password Generator</title>
+    <link rel="icon" href="./assets/images/nmalcolm.rpg.jpg">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-4 p-3 col-12 col-md-8 main">
         <form>
+            <h1>Random Password Generator</h1>
             <div class="form-group">
                 <label for="passwordLength">Password Length</label>
                 <input type="range" class="form-control-range" id="passwordLength" min="8" max="128" value="20">
@@ -47,11 +49,18 @@
                 <input class="form-check-input" type="checkbox" id="lowerLetters" value="lowerLetters">
                 <label class="form-check-label" for="lowerLetters">Lowercase Letters</label>
             </div>
-            <button type="button" class="btn btn-success" onclick="generatePassword();">Success</button>
-            <div class="result-container">
-                <span id="result"></span>
+            <br>
+            <button type="button" class="btn btn-success m-2" onclick="generatePassword();">Generate</button>
+            <div class="row">
+                <div class="container col-10 col-lg-11">
+                    <textarea readonly id="result" class="form-control" placeholder="Your Secure Password"
+                        aria-label="Generated Password"></textarea>
+                </div>
+                <div class="container col-2 col-lg-1">
+                    <button type="button" class="btn btn-primary p-3" onclick="copy_password();" id="clipboard"><i
+                            class="far fa-clipboard"></i></button>
+                </div>
             </div>
-            <button class="btn mr-auto" onclick="copy_password();" id="clipboard"><i class="far fa-clipboard"></i></button>
         </form>
     </div>
     <script type="text/javascript" src="./assets/js/script.js"></script>
