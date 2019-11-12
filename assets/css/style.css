@@ -1,0 +1,10 @@
+body{
+    background-image: url("../images/textured_paper.png");
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container{
+    background-color: #ffffff;
+    border: solid 2px grey;
+}
