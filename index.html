@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <div class="form-group">
+            <label for="formControlRange">Example Range input</label>
+            <input type="range" class="form-control-range" id="formControlRange" min="4" max="20">
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="numbrers" value="numbers">
+            <label class="form-check-label" for="numbers">Numbers</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="symbols" value="symbols">
+            <label class="form-check-label" for="symbols">Symbols</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="upperLetters" value="upperLetters">
+            <label class="form-check-label" for="upperLetters">Uppercase Letters</label> 
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="lowerLetters" value="lowerLetters">
+            <label class="form-check-label" for="lowerLetters">Loercase Letters</label>
+        </div>
+    </form>
+    <script>
+        var upperLetter = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+        var lowerLetter = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+        var unicode = ['\u0020', '\u0021', '\u0022', '\u0023', '\u0024', '\u0025', '\u0026', '\u0027', '\u0028', '\u0029', '\u002A', '\u002B', '\u002C', '\u002D', '\u002E', '\u002F', '\u003A', '\u003B', '\u003C', '\u003D', '\u003E', '\u003F', '\u0040', '\u005B', '\u005C', '\u005D', '\u005E', '\u005F', '\u0060', '\u007B', '\u007C', '\u007D', '\u007E']
+        var intergers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        var passord= ""
+        var passwordLength = ""
+
+        function random (arr){
+           return arr[Math.floor(Math.random() * arr.length)]
+        }
+
+        var passwordLength = prompt("how long is your passord?");
+
+        var upper = confirm("will your password include uppercase letters?");
+        var lower = confirm("will your password include lowercase letters?");
+        var numbers = confirm("will your password include numbers?");
+        var symbols = confirm("will your password include symbols?");
+
+        var types = [upper, lower, numbers, symbols]
+
+        for(let i = 0; i < passwordLength; ){
+            
+        }
+
+    </script>
+
+</body>
+
+</html>
