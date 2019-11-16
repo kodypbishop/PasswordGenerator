@@ -25,7 +25,7 @@
 </head>
 
 <body>
-    <div class="container mt-4 p-3 col-12 col-md-8 main">
+    <div class="container mt-4 p-3 col-10 col-md-9 col-lg-6 main">
         <form>
             <h1>Random Password Generator</h1>
             <div class="form-group">
@@ -33,32 +33,36 @@
                 <input type="range" class="form-control-range" id="passwordLength" min="8" max="128" value="20">
                 <p>Value: <span id="demo"></span></p>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="numbers" value="numbers">
-                <label class="form-check-label" for="numbers">Numbers</label>
+            <div class="btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary btn-block ml-auto mr-auto mt-2 mb-2">
+                    <input type="checkbox" id="numbers" autocomplete="off"> Numbers
+                </label>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="symbols" value="symbols">
-                <label class="form-check-label" for="symbols">Symbols</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="upperLetters" value="upperLetters">
-                <label class="form-check-label" for="upperLetters">Uppercase Letters</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="lowerLetters" value="lowerLetters">
-                <label class="form-check-label" for="lowerLetters">Lowercase Letters</label>
-            </div>
+            <div class="btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary btn-block ml-auto mr-auto mt-2 mb-2">
+                  <input type="checkbox" id="symbols"autocomplete="off"> Symbols
+                </label>
+              </div>
+              <div class="btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary btn-block ml-auto mr-auto mt-2 mb-2">
+                  <input type="checkbox" id="upperLetters" autocomplete="off"> Uppercase Letters
+                </label>
+              </div>
+              <div class="btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary btn-block ml-auto mr-auto mt-2 mb-2">
+                  <input type="checkbox" id="lowerLetters" autocomplete="on"> Lowercase Letters
+                </label>
+              </div>
             <br>
-            <button type="button" class="btn btn-success m-2" onclick="generatePassword();">Generate</button>
-            <div class="row">
-                <div class="container col-10 col-lg-11">
+            <button type="button" class="btn btn-success btn-block ml-auto mr-auto mt-2 mb-2" onclick="generatePassword();">Generate</button>
+            <div class="d-flex" id="textDiv">
+                <div class="flex-fill" id="text">
                     <textarea readonly id="result" class="form-control" placeholder="Your Secure Password"
                         aria-label="Generated Password"></textarea>
                 </div>
-                <div class="container col-2 col-lg-1">
-                    <button type="button" class="btn btn-primary p-3" onclick="copy_password();" id="clipboard"><i
-                            class="far fa-clipboard"></i></button>
+                <div class="d-flex align-items-stretch justify-content-end">
+                    <button type="button" class="btn btn-primary" onclick="copy_password();" id="clipboard">
+                        <i class="far fa-clipboard"></i></button>
                 </div>
             </div>
         </form>
